@@ -11,14 +11,14 @@ object Versions {
 
     internal var support_lib = "27.0.2"
     internal var constraint_version = "1.1.0"
-    internal var kotlin_version = "1.2.31"
+    internal var kotlin_version = "1.3.0"
     internal var dagger_version = "2.14.1"
 
     internal var junit_version = "4.12"
     internal var runner_version = "1.0.1"
     internal var espresso_core_version = "3.0.1"
 
-    internal var gradle_plugin_version = "3.1.1"
+    internal var gradle_plugin_version = "3.2.1"
 
     internal const val retrofit_version = "2.3.0"
     internal const val okhttp_version = "3.10.0"
@@ -35,7 +35,7 @@ object PluginsDeps {
 }
 
 object KotlinDeps {
-    var kotlin_std_lib = "org.jetbrains.kotlin:kotlin-stdlib-jre7:${Versions.kotlin_version}"
+    var kotlin_std_lib = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlin_version}"
     var kotlin_reflection = "org.jetbrains.kotlin:kotlin-reflect:${Versions.kotlin_version}"
     var kotlin_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin_version}"
     var android_ktx = "androidx.core:core-ktx:0.2"
@@ -53,6 +53,7 @@ object OtherDeps {
     var beautyLogger = "com.github.ihsanbal:LoggingInterceptor:2.0.5"
     var glide = "com.github.bumptech.glide:glide:${Versions.glide_version}"
     var glide_processer = "com.github.bumptech.glide:compiler:${Versions.glide_version}"
+    val multidex = "com.android.support:multidex:1.0.3"
 }
 
 object DaggerDeps {
@@ -75,6 +76,7 @@ object RetrofitDeps {
     var okhttp = "com.squareup.okhttp3:okhttp:${Versions.okhttp_version}"
     var oki = "com.squareup.okio:okio:${Versions.oki_version}"
     var logging = "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp_version}"
+    val mockWebServer = "com.squareup.okhttp3:mockwebserver:${Versions.okhttp_version}"
     var gson = "com.google.code.gson:gson:2.6.2"
     var gson_converter = "com.squareup.retrofit2:converter-gson:2.0.1"
 }

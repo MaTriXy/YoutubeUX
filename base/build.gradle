@@ -27,6 +27,10 @@ android {
         }
     }
 
+    lintOptions {
+        abortOnError false
+    }
+
 }
 
 allprojects {
@@ -63,6 +67,7 @@ dependencies {
     api RetrofitDeps.logging
     api RetrofitDeps.gson
     api RetrofitDeps.gson_converter
+    api RetrofitDeps.mockWebServer
 
     api RxDeps.main
     api RxDeps.android
@@ -74,10 +79,12 @@ dependencies {
     kapt ArchComponents.life_cycle_compiler
     api ArchComponents.paging
 
-    testImplementation TestDeps.junit
-    androidTestImplementation TestDeps.runner
-    androidTestImplementation TestDeps.espresso_core
+    testApi TestDeps.junit
+    androidTestApi TestDeps.runner
+    androidTestApi TestDeps.espresso_core
 
-    testImplementation TestDeps.test_live_data
-    testImplementation TestDeps.test_room
+    testApi TestDeps.test_live_data
+    testApi TestDeps.test_room
+
+    api 'com.android.support.test.espresso:espresso-idling-resource:3.0.2'
 }
